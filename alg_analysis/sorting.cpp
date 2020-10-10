@@ -14,7 +14,14 @@ void swap(int &xp, int &yp) {
     yp = temp;  
 }
 
-// Bad bubble sort:
+/*
+ * Bad Bubble Sort.
+ *
+ * Best case: O(n^2)
+ * Worst case:O(n^2)
+ *
+ * Think how we can improve this!
+*/
 void bubbleSort(int * arr, int n) {  
     int i, j;
     for (i = 0; i < n-1; i++)
