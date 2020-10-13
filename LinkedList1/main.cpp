@@ -7,6 +7,28 @@
 #include<iostream>
 #include"list.h"
 
+Node * searchLocation(Node * head, int search_id) {
+
+    if (!head) {
+
+        return nullptr;
+
+    }
+    else {
+
+        Node * temp = head;
+        while (temp->next && temp->next->data < search_id) {
+
+            temp = temp->next;
+
+        }
+        return temp;
+
+    }
+
+}
+
+
 int main() {
 
     int val = 1;
@@ -37,6 +59,18 @@ int main() {
     // should print:
     // 0 1 1 2 3 4 4 5 5 6 6 7 8 9 10 11 12 13 14
     print_list(head);
+
+    Node * temp = searchLocation(head, 234895738);
+    if (temp) {
+
+        std::cout << temp->data << "\n";
+
+    }
+    else {
+
+        std::cout << "Node dead buddy\n";
+
+    }
 
     return 0;
 }
