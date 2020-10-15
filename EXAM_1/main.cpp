@@ -5,6 +5,7 @@
 */
 
 #include <iostream>
+#include <string>
 
 /*
  * Function to find the min/max of value
@@ -23,9 +24,10 @@ int min_max(int * arr, int len, bool mini) {
 
   }
 
-  int i, max = arr[0], min = arr[0];
+  int i, max = arr[0];
+  int min = arr[0];
 
-  if (!min) {
+  if (!mini) {
 
     for(i = 1; i < len; i++) {
 
@@ -58,18 +60,46 @@ int min_max(int * arr, int len, bool mini) {
 
 }
 
-int main(int argc, char **argv) {
+/*
+ * Recursive Palindrome Function.
+*/
+int is_palindrome(std::string arr, int start, int end) {
 
-  int * arr = new int[10];
-  int i;
-  for (i = 0; i < 10; i++) {
+  if (start < end) {
 
-    arr[i] = i;
+    if (arr[start] != arr[end]) {
+
+      return 0;
+
+    }
+    
+    return is_palindrome(arr, start + 1, end - 1);
+
+  }
+  else {
+
+    return 1;
 
   }
 
-  std::cout << min_max(arr, 10, 1) << "\n";
-  
+}
+
+int main(int argc, char **argv) {
+
+  std::string name = "hannah";
+  int decision = is_palindrome(name, 0, 5);
+  if (decision == 1) {
+
+    std::cout << name <<  " is a palindrome!\n";
+
+  }
+  else {
+
+    std::cout << name << " is not a palindrome.\n";
+
+
+  }
+
   return 0;
 
 }
