@@ -22,6 +22,13 @@ Node * searchLocation(Node * head, int search_id) {
             temp = temp->next;
 
         }
+
+        if (temp == head) {
+
+            return nullptr;
+
+        }
+
         return temp;
 
     }
