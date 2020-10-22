@@ -41,6 +41,16 @@ public:
   */
   void remove_node(int id);
 
+
+  /*
+   * Print List.
+   *
+   * This method will iterate through the
+   * linked list and print each node as it
+   * goes.
+  */
+  void print_list();
+
 };
 
 #endif

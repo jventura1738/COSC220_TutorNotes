@@ -14,5 +14,12 @@ int main(int argc, char** argv) {
   list.insert_node();
   list.insert_node();
 
+  list.print_list();
+
+  std::cout << "removing ID 2 if there is one.\n";
+
+  list.remove_node(2);
+  list.print_list();
+
   return 0;
 }

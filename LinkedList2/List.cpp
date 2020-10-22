@@ -30,27 +30,70 @@ void List::insert_node() {
 
   Node * newnode = create_node();
 
-  if (!head) {
+  if (!this->head) {
 
     head = newnode; 
 
   }
-  
-  Node * temp = head;
+  else {
 
-  while(temp->next && temp->next->id < newnode->id) {
+    Node * prev = this->head;
+    
+    while(prev->next && prev->id > prev->next->id) {
 
-    temp = temp->next;
+      prev = prev->next;
+
+    }
+
+    newnode->next = prev->next;
+    prev->next = newnode;
 
   }
-
-  newnode->next = temp->next;
-  temp->next = newnode;
 
 }
 
 void List::remove_node(int id) {
 
+  Node *curr = this->head;
+	Node *prev;
 
+	if (!this->head) return;
+
+	else if (head->id == id) {
+		
+    curr = this->head->next;
+		delete this->head;
+		this->head = curr;
+
+	}
+	else {
+
+		while (curr && curr->id != id) {
+
+			prev = curr;
+			curr = curr->next;
+		
+    }
+		if (curr) {
+
+			prev->next = curr->next;
+			delete curr;
+		
+    }
+
+	}
+
+}
+
+
+void List::print_list() {
+
+  Node * temp = this->head;
+  while(temp) {
+
+    std::cout << temp->id << ", " << temp->name << ".\n";
+    temp = temp->next;
+
+  }
 
 }

@@ -2,7 +2,7 @@
 # Sessioni 10/20/20
 
 # Makefile variables:
-gc = g++ -c
+gc = g++ -c -std=c++11
 go = g++ -o
 
 main: main.o
