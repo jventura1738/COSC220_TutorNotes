@@ -8,7 +8,11 @@ List::List() {
 
 List::~List() {
 
-  std::cout << "List destructed.\n";
+  while(this->head) {
+
+    this->remove_node(this->head->id);
+
+  }
 
 }
 
