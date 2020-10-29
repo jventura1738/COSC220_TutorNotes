@@ -9,7 +9,7 @@ main: main.o
 	$(go) main main.o 
 	#queue.o
 
-main.o: main.cpp #queue.o
+main.o: main.cpp queue.h queue.cpp
 	$(gc) main.cpp
 
 # queue.o: queue.h queue.cpp
