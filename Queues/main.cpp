@@ -1,3 +1,8 @@
+/*
+ * Justin Ventura Fall 2020
+ * COSC220 Tutor Notes
+*/
+
 #include "queue.h"
 
 int main(int argc, char ** argv) {

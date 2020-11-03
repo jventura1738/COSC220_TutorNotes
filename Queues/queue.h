@@ -1,3 +1,8 @@
+/*
+ * Justin Ventura Fall 2020
+ * COSC220 Tutor Notes
+*/
+
 #ifndef QUEUE_H
 #define QUEUE_H
 

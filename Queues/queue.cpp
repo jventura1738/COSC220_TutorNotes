@@ -1,3 +1,8 @@
+/*
+ * Justin Ventura Fall 2020
+ * COSC220 Tutor Notes
+*/
+
 #include "queue.h"
 
 template <typename T>
@@ -52,10 +57,7 @@ void Queue<T>::enqueue(const T val) {
 
     std::cout << "Queue is full!\n";
 
-  }
-
-}
-
+  }#include "queue.cpp"
 template <typename T>
 T Queue<T>::dequeue() {
 
