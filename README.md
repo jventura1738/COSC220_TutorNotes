@@ -6,3 +6,4 @@
 - Linked List with class. (WIP)
 - A few sorting algorithms.
 - Recursive functions.
+- Binary Search Trees
