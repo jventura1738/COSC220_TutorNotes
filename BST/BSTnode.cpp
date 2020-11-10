@@ -1,7 +1,7 @@
 #include "BSTnode.h"
 
 template <class T>
-BST<T>::BST<T>(T val) {
+BSTnode<T>::BSTnode(T val) {
 
   this->data = val;
   this->parent = nullptr; // -std=c++11
@@ -10,7 +10,8 @@ BST<T>::BST<T>(T val) {
 
 }
 
-void print() {
+template <class T>
+void BSTnode<T>::print() {
 
   std::cout << this->data << "\n";
 

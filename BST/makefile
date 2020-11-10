@@ -8,11 +8,8 @@ go = g++ -o
 main: main.o
 	$(go) main main.o
 
-main.o: main.cpp BST.h BST.cpp
+main.o: main.cpp BST.h BST.cpp BSTnode.h BSTnode.cpp
 	$(gc) main.cpp
-
-BST.o: BST.h BST.cpp
-	$(gc) BST.cpp
 
 clean:
 	rm -rf *.o main

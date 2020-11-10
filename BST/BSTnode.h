@@ -6,13 +6,11 @@
 template <class T>
 class BSTnode {
 
-private:
-  T data;
-  BSTNode<T> * parent;
-  BSTNode<T> * left;
-  BSTNode<T> * right;
-
 public:
+  T data;
+  BSTnode<T> * parent;
+  BSTnode<T> * left;
+  BSTnode<T> * right;
   BSTnode(T val);
   void print();
 
