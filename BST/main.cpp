@@ -2,16 +2,22 @@
 
 int main () {
 
-  BST<char> tree;
-  int i;
-  for (i = 65; i < 91; i++) {
+  BST<int> tree;
+  int x;
+  std::cout << "enter a root: ";
+  std::cin >> x;
+  BSTnode<int> * node = new BSTnode<int>(x);
+  tree.insert(node);
 
-    BSTnode<char> * node = new BSTnode<char>(i);
+  int i;
+  for (i = 0; i < 10; i++) {
+
+    BSTnode<int> * node = new BSTnode<int>(i);
     tree.insert(node);
 
   }
   
-  tree.in_order(tree.root); 
+  tree.in_order(tree.root);
 
   return 0;
 }

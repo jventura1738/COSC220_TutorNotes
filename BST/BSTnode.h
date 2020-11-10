@@ -11,6 +11,8 @@ public:
   BSTnode<T> * parent;
   BSTnode<T> * left;
   BSTnode<T> * right;
+
+  // Constructor
   BSTnode(T val);
   void print();
 
