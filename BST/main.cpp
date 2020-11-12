@@ -19,5 +19,8 @@ int main () {
   
   tree.in_order(tree.root);
 
+  BSTnode<int> * test = new BSTnode<int>(99);
+  tree.remove(test);
+
   return 0;
 }

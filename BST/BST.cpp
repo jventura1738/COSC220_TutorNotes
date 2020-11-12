@@ -187,8 +187,15 @@ void BST<T>::insert(BSTnode<T> * z) {
 template <typename T>
 void BST<T>::remove(BSTnode<T> * z) {
 
-  BSTnode<T> y = NULL;
-  BSTnode<T> x = NULL;
+  if (!this->search(this->root, z->data)) {
+
+    std::cout << z->data << " is not in BST.\n";
+    return;
+
+  }
+
+  BSTnode<T> * y = NULL;
+  BSTnode<T> * x = NULL;
   if (!z->left || !z->right) {
 
     y = z;
