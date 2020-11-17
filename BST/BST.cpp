@@ -86,7 +86,7 @@ BSTnode<T> * _predecessor(BSTnode<T> * x) {
 
   if (x->left) {
 
-      return _max(x->left);
+    return _max(x->left);
 
   }
   else {
